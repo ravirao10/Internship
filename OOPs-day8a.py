@@ -1,0 +1,42 @@
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+    # Normal method (common for all animals)
+    def sleep(self):
+        print("Animal is sleeping")
+
+# Child class Dog
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+
+# Child class Cat
+class Cat(Animal):
+    def sound(self):
+        print("Meow")
+
+# Child class Cow
+class Cow(Animal):
+    def sound(self):
+        print("Moo")
+
+# Creating objects
+dog = Dog()
+cat = Cat()
+cow = Cow()
+
+# Calling methods
+dog.sound()
+dog.sleep()
+
+cat.sound()
+cat.sleep()
+
+cow.sound()
+cow.sleep()
